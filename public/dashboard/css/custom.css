@@ -1,0 +1,16 @@
+@font-face{
+    src: url('../../fonts/Almarai-Regular.ttf');
+    font-family: "MainFontRegular";
+}
+
+*:not(i) {
+    font-family: "MainFontRegular"
+}
+
+.c-sidebar{
+    background: #232528
+}
+
+.c-sidebar .c-sidebar-nav-link:hover{
+    background:#444445;
+}
