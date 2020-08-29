@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'manager', 'middleware' => 'web'], function() {
+Route::group(['prefix' => 'manager', 'middleware' => 'auth'], function() {
     Route::get('manager', function(){
         return view('dashboard.layout');
     })->name('homepage.index');
@@ -33,8 +33,6 @@ Route::group(['prefix' => 'manager', 'middleware' => 'web'], function() {
     Route::post('add_new_building', 'AcademyMediaController@addNewBuilding')->name('add_new_building.submit');
     Route::post('add_new_graduation', 'AcademyMediaController@addNewGraduation')->name('add_new_graduation.submit');
     Route::post('add_new_conference', 'AcademyMediaController@addNewConference')->name('add_new_conference.submit');
-
-
     Route::resource('vision', 'VisionController');
     Route::resource('faq', 'FAQController');
     Route::resource('applicants', 'ApplicationsController');
