@@ -33,7 +33,7 @@
                             </thead>
                             <tbody>
                                @isset($vision)
-                               <tr>
+                                <tr>
                                     <td>{{ $vision->vision }}</td>
                                     <td>{{ $vision->message }}</td>
                                     <td>{{ $vision->goal }}</td>
